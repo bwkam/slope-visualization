@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>example #2</title>
+  <style>
+    html, body {
+      height: 100%; /* Ensure the body and html take full height */
+      margin: 0; /* Remove default margins */
+    }
+
+    button {
+      background-color: gray !important; 
+      padding: 2px !important;
+      border: 1px solid;
+    }
+
+    input {
+      border: 1px solid;
+      padding: 2px !important;
+    }
+
+    #bg {
+      background-image: url("./bg.jpg");
+    }
+
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center"> 
+  <div class="flex items-center justify-center outline w-full h-full"> 
+    <div class="flex-1 h-full bg-gray-300">
+      <canvas id="chart" height="500" width="500"></canvas>
+    </div> 
+    <div class="flex-col outline items-center justify-between mx-auto h-full bg-gray-200 flex flex-1"> 
+      <div class="outline flex-1 w-full">
+        <div id="bg" class="relative w-full h-full bg-repeat-x bg-cover"></div>
+        <img class="absolute h-[200px] bottom-[90px] right-[300px]" src="./car.png" alt="truck">
+      </div>
+      <div class="flex-2 pt-2 flex justify-between w-full px-10">
+        <div>
+          <button>move (slope)</button>
+          <input class="border" size="2" type="number" name="speed" id="speed">
+        </div>
+        <div>
+          <button type="button" id="stop">stop</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script src="main.js"></script>
+</body>
+</html>
